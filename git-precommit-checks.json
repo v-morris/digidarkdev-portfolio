@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "message": "Remove all conflict markers and resolve merge conflict",
+      "regex": "/^[<>|=]{4,}/m"
+    },
+    {
+      "filter": "\\.js$",
+      "message": "`console.log` found in code",
+      "regex": "console\\.log"
+    }
+  ]
+}
