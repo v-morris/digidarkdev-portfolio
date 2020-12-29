@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Home() {
-  return <React.Fragment>Hello</React.Fragment>
+  return <React.Fragment>Home</React.Fragment>
 }
 
 export default Home
