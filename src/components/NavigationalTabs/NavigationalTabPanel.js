@@ -1,7 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { makeStyles, useTheme, useMediaQuery, Typography, Box } from '@material-ui/core'
-import NavigationBar from './NavigationBar';
+import {
+  makeStyles,
+  useTheme,
+  useMediaQuery,
+  Typography,
+  Box,
+} from '@material-ui/core'
+import NavigationBar from './NavigationBar'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -14,7 +20,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
+        <Box p={10}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -37,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavigationalTabPanel() {
   const classes = useStyles()
-  const theme = useTheme();
+  const theme = useTheme()
   const isMobileView = useMediaQuery(theme.breakpoints.up('sm'))
   const [value, setValue] = React.useState(0)
 
@@ -47,7 +53,11 @@ export default function NavigationalTabPanel() {
 
   return (
     <div className={classes.root}>
-      <NavigationBar isMobileView={isMobileView} value={value} handleChange={handleChange} />
+      <NavigationBar
+        isMobileView={isMobileView}
+        value={value}
+        handleChange={handleChange}
+      />
       <TabPanel value={value} index={0}>
         Home
       </TabPanel>
